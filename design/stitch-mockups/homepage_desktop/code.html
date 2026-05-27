@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MedScan Radiology | Clinical Precision &amp; Imaging Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#dce9ff",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#003d9b",
+                    "surface-variant": "#d3e4fe",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "outline-variant": "#c3c6d6",
+                    "on-primary-fixed": "#001848",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#e5eeff",
+                    "surface-container-low": "#eff4ff",
+                    "on-surface": "#0b1c30",
+                    "on-background": "#0b1c30",
+                    "on-secondary-fixed": "#131b2e",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-secondary-container": "#5c647a",
+                    "tertiary-fixed": "#c4e7ff",
+                    "on-tertiary-fixed": "#001e2c",
+                    "secondary-container": "#dae2fd",
+                    "tertiary-container": "#006285",
+                    "inverse-surface": "#213145",
+                    "secondary-fixed": "#dae2fd",
+                    "primary-container": "#0052cc",
+                    "on-surface-variant": "#434654",
+                    "error-container": "#ffdad6",
+                    "secondary": "#565e74",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-tertiary-container": "#9fdbff",
+                    "tertiary": "#004964",
+                    "background": "#f8f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface": "#f8f9ff",
+                    "primary-fixed": "#dae2ff",
+                    "on-primary-container": "#c4d2ff",
+                    "inverse-primary": "#b2c5ff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "surface-tint": "#0c56d0",
+                    "surface-dim": "#cbdbf5",
+                    "surface-bright": "#f8f9ff",
+                    "outline": "#737685"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "margin": "32px",
+                    "lg": "48px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "caption": ["Manrope"],
+                    "headline-xl": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "headline-lg-mobile": ["Manrope"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 w-full flex justify-between items-center px-margin py-md bg-surface-container-lowest dark:bg-surface-dim border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none z-50">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="clinical_notes">clinical_notes</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">MedScan Radiology</span>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-md hover:text-primary-container dark:hover:text-on-primary-container transition-colors duration-200" href="#">Services</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-md hover:text-primary-container dark:hover:text-on-primary-container transition-colors duration-200" href="#">Appointments</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-body-md hover:text-primary-container dark:hover:text-on-primary-container transition-colors duration-200" href="#">Patient Portal</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Book Now</button>
+</div>
+</header>
+<main class="pt-[80px]">
+<!-- Hero Section -->
+<section class="relative min-h-[870px] flex items-center overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 z-0">
+<img alt="Modern radiology center background" class="w-full h-full object-cover opacity-15 mix-blend-multiply" data-alt="A wide-angle shot of a state-of-the-art radiology facility with clean lines, minimalist furniture, and soft blue atmospheric lighting. In the background, a high-tech MRI machine is visible through a glass partition. The setting is bright and clinical, using a professional color palette of whites and deep medical blues to convey precision and safety. The mood is calm, professional, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSBizznw1f8YnAI2b-b9LM9WVeG2gRH-KHBjjun74T6UezGBKxwCLEuILSHjydp5btei7qNp0yvvfOJ6OV79FOmRgIGypIWUYuJDjMPB6qp6gBIzsdbdTryhpjgzSsbUo555ThtEz543fVKOjPRAQeoQMociHWmyo4p9vdR0WbIfxlMBZfFTgMc2hNGrz_JB0dURkFEyYZraJJwnghs_KhWJYRNEJXZmDI_TA4BQlEgeS0lGmWPaph7NFAIvgQJO7LcE-YvEj77G4"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/80 to-transparent"></div>
+</div>
+<div class="container mx-auto px-margin relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="max-w-2xl">
+<span class="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary font-label-md text-label-md mb-md">
+                        Advanced Diagnostic Center
+                    </span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-md leading-tight">
+                        Precision Imaging for <span class="text-primary">Clinical Clarity</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-lg">
+                        Delivering high-fidelity diagnostic reports with state-of-the-art technology and expert sub-specialty radiologist oversight.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary text-on-primary px-lg py-md rounded-lg font-label-md text-label-md shadow-lg shadow-primary/20 hover:bg-primary-container transition-all">
+                            Schedule an Appointment
+                        </button>
+<button class="border-2 border-primary text-primary px-lg py-md rounded-lg font-label-md text-label-md hover:bg-primary/5 transition-all">
+                            View Services
+                        </button>
+</div>
+</div>
+<!-- Trust Section Integration (Visual Float) -->
+<div class="hidden lg:grid grid-cols-1 gap-md">
+<div class="glass-card p-md rounded-xl shadow-sm flex items-center gap-md border-l-4 border-primary">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-md font-bold">Fully Accredited</h4>
+<p class="text-caption font-caption text-on-surface-variant">Meets the highest global standards in diagnostic safety.</p>
+</div>
+</div>
+<div class="glass-card p-md rounded-xl shadow-sm translate-x-12 flex items-center gap-md border-l-4 border-tertiary">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-md font-bold">Fast Results</h4>
+<p class="text-caption font-caption text-on-surface-variant">Reports delivered to your physician within 24-48 hours.</p>
+</div>
+</div>
+<div class="glass-card p-md rounded-xl shadow-sm flex items-center gap-md border-l-4 border-secondary">
+<div class="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</div>
+<div>
+<h4 class="font-headline-md text-body-md font-bold">Patient Privacy</h4>
+<p class="text-caption font-caption text-on-surface-variant">Secure, HIPAA-compliant digital portal for your data.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-xl bg-surface-container-low">
+<div class="container mx-auto px-margin">
+<div class="text-center mb-xl max-w-3xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-sm">Our Diagnostic Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Utilizing the latest generation of scanning technology to provide unparalleled visual data for accurate medical intervention.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- MRI Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-md border border-outline-variant hover:border-primary transition-all shadow-sm">
+<div class="h-48 mb-md rounded-lg overflow-hidden relative">
+<img alt="MRI Machine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up, high-resolution shot of a modern MRI scanner inside a pristine, high-tech medical room. The lighting is soft and neutral, highlighting the smooth, white metallic surfaces of the machine. The environment is impeccably clean and organized, following a professional corporate-modern aesthetic. The colors are dominated by clinical whites and subtle navy blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaOZ3hM-fpLvKkxdM6ZqNRWlVKLWtha0CMTuOemfBXpD80vdZim4K2mNwemOTrQbIlsER7-ZehEOYBsEDMaxQX8bQk2pblFRJRBCGWh1yCX-MjI8PgCC42jkeXdX3IeP92gaYux2BUxfi-sIJOO48d4k8GHBAq3SQ-Zsm9cUFRF0a4dxUlndulofRILE6iXZrggYKhWtDWxloFAIW87woY3E2a0lb1cPKDIH0Pzh6S60yU8MsYNX97nFf9Jdh-cRFety7hc8rwupo"/>
+<div class="absolute top-sm right-sm bg-primary text-on-primary rounded-full px-sm py-xs font-label-md text-[10px] tracking-wider uppercase">Advanced</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">MRI</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md leading-relaxed">High-resolution 3T MRI for neurological, musculoskeletal, and cardiac imaging.</p>
+<a class="inline-flex items-center gap-xs text-primary font-label-md text-label-md hover:underline" href="#">
+                            Learn More <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- CT Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-md border border-outline-variant hover:border-primary transition-all shadow-sm">
+<div class="h-48 mb-md rounded-lg overflow-hidden">
+<img alt="CT Scanner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, futuristic CT scanner in a brightly lit radiology suite. The image is captured with a shallow depth of field, focusing on the ring of the scanner. The atmosphere is clinical and extremely clean, with a palette of crisp whites and cool grays. Soft, overhead medical lighting creates a sense of safety and precision. The overall aesthetic is high-fidelity and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPyOlMVaj9xNI-FNKwHd03yb4MvCyCcBxgoZmz54I_EySikPPTH0YGgrodxSMxNRzL5L-Mdy8JLkHJKG277UAQjYfAHdnLpLEUmxTytgw7_gOYG0RF4tUAWwC0xlCY7JujG7qZp5JgTCJietTFGj88tVEkqVAVF3dfFi14cw_Qi2qyTKUx3VJVGdIEUx-_Rf3dV1X2UAPo0vlCUZDYpBAp0qrNx7d8esQHgLjNQzDhWijm9KCFrm148KlmQ-hy_-UGYA_it9VsQ2g"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">CT Scanning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md leading-relaxed">Low-dose multi-slice CT technology for detailed structural analysis and vascular studies.</p>
+<a class="inline-flex items-center gap-xs text-primary font-label-md text-label-md hover:underline" href="#">
+                            Learn More <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Ultrasound Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-md border border-outline-variant hover:border-primary transition-all shadow-sm">
+<div class="h-48 mb-md rounded-lg overflow-hidden">
+<img alt="Ultrasound Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern ultrasound monitor displaying a clear diagnostic image in a darkened exam room. A gloved hand is visible holding the transducer. The lighting is focused and soft, creating a calm and private patient environment. The color palette includes deep navy backgrounds and bright white highlights, emphasizing a clinical and high-tech medical setting. The mood is intimate, professional, and empathetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhQ8S3-FzmM7Ny_-KY0mzszW06orUfmIFbRvmLmhDu9fWd4d1gkdrD0VscU2usEIrda5Odaw27IJYVZjLEkNJZRrB631xMKE38tFSgJX6aeMGSr8sxwhKjkBltx77k2w1-rtvGe1lgdW9gL3eelTPfzsNbVyibe4-3rfYfRGZzDXauWhpLuDxkGndXcPGm39Ia1H9uMs5nNBmOodkBLxdUVMhmu80-WRDVJpA16vsLfZvtUj3pqRND8dB_nMvAbAmLCHWwaI6rFd0"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-xs">Ultrasound</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md leading-relaxed">Non-invasive diagnostic sonography for obstetric, abdominal, and vascular care.</p>
+<a class="inline-flex items-center gap-xs text-primary font-label-md text-label-md hover:underline" href="#">
+                            Learn More <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Expert Reports Section (Asymmetric Layout) -->
+<section class="py-xl overflow-hidden">
+<div class="container mx-auto px-margin">
+<div class="flex flex-col lg:flex-row items-center gap-xl">
+<div class="w-full lg:w-1/2 relative">
+<div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-surface-container-lowest">
+<img alt="Radiologist Analyzing Image" data-alt="A professional radiologist in a white lab coat sitting in a dimly lit workstation, focused on high-resolution medical monitors displaying detailed brain scans. The lighting from the screens illuminates their face with a soft glow. The workstation is sleek and modern, utilizing advanced medical imaging software. The overall style is high-contrast corporate modern, emphasizing technical expertise and careful analysis in a quiet, clinical atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYTf_f1lnUXUfdbWOstUvNR4QXYjG4HAUSapMn0zndw10xpFHynpspcLGeLR3WC4rJKgz0IjY90nU_yboOJrxVUuELtzCKP7oWZd1Li3ftCoc15CfUZUUsQ2n5ckXOeZEgNbEc3FfPD8mztTlHk6Z54xysWbfMT3E0P-gE-bKXst7B4SewD8FIRWpabXW8BPrAX16wcx632JRSbSG0VZaZI7c0Od3BzH_pBUBkwosGpNoy4ikWDPUuRQlipPhjU1l-Cn2pbvXiMpc"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -top-6 -left-6 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-tertiary/5 rounded-full blur-3xl"></div>
+</div>
+<div class="w-full lg:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-md">Expert Radiologist Reports</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed">
+                            Images are only as good as the eyes that interpret them. At MedScan, every scan is reviewed by our team of Board-Certified, sub-specialty radiologists who bring years of clinical experience to your diagnosis.
+                        </p>
+<div class="space-y-md">
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="clinical_notes">clinical_notes</span>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Sub-specialty Oversight</h5>
+<p class="text-caption font-caption text-on-surface-variant">Your scans are routed to specialists in neuro, cardiac, or orthopedic radiology.</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="history">history</span>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Comparative Analysis</h5>
+<p class="text-caption font-caption text-on-surface-variant">We cross-reference current findings with your historical imaging for longitudinal tracking.</p>
+</div>
+</div>
+<div class="flex items-start gap-md">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="chat_bubble">chat_bubble</span>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Physician Consultation</h5>
+<p class="text-caption font-caption text-on-surface-variant">Direct line of communication between our radiologists and your referring doctor.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-xl bg-primary text-on-primary">
+<div class="container mx-auto px-margin text-center">
+<h2 class="font-headline-lg text-headline-lg mb-md">Ready to schedule your visit?</h2>
+<p class="font-body-md text-body-md opacity-90 mb-lg max-w-xl mx-auto">Find a location near you and book your appointment through our secure online portal.</p>
+<div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-sm bg-surface-container-lowest p-xs rounded-xl shadow-xl">
+<div class="flex-1 flex items-center px-md text-on-surface">
+<span class="material-symbols-outlined text-outline mr-sm" data-icon="location_on">location_on</span>
+<input class="w-full border-none focus:ring-0 font-body-md text-on-surface placeholder:text-outline bg-transparent py-md" placeholder="Enter zip code or city" type="text"/>
+</div>
+<button class="bg-primary-container text-on-primary-container px-lg py-md rounded-lg font-label-md text-label-md hover:opacity-90 transition-all whitespace-nowrap">
+                        Find Location
+                    </button>
+</div>
+<div class="mt-lg flex justify-center gap-xl opacity-80">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-caption text-caption">Insurance Accepted</span>
+</div>
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-caption text-caption">Same-day Availability</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full px-margin py-lg bg-surface-container dark:bg-inverse-surface border-t border-outline-variant dark:border-outline">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-gutter">
+<div class="max-w-xs">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="clinical_notes">clinical_notes</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface">MedScan</span>
+</div>
+<p class="font-caption text-caption text-on-surface-variant mb-md leading-relaxed">
+                    © 2024 MedScan Radiology Center. All rights reserved. Clinical excellence through precision imaging.
+                </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-xl">
+<div class="flex flex-col gap-sm">
+<h6 class="font-label-md text-label-md text-on-surface dark:text-inverse-on-surface uppercase tracking-wider">Resources</h6>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary dark:hover:text-primary-fixed underline transition-all" href="#">Patient Rights</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary dark:hover:text-primary-fixed underline transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary dark:hover:text-primary-fixed underline transition-all" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h6 class="font-label-md text-label-md text-on-surface dark:text-inverse-on-surface uppercase tracking-wider">Connect</h6>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary dark:hover:text-primary-fixed underline transition-all" href="#">Contact Us</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary dark:hover:text-primary-fixed underline transition-all" href="#">Locations</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary dark:hover:text-primary-fixed underline transition-all" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h6 class="font-label-md text-label-md text-on-surface dark:text-inverse-on-surface uppercase tracking-wider">Social</h6>
+<div class="flex gap-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="share">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="public">public</span></a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and simple effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>

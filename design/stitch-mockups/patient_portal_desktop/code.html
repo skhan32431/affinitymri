@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Patient Portal | MedScan Radiology</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#dce9ff",
+                    "on-error-container": "#93000a",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#003d9b",
+                    "surface-variant": "#d3e4fe",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "outline-variant": "#c3c6d6",
+                    "on-primary-fixed": "#001848",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#e5eeff",
+                    "surface-container-low": "#eff4ff",
+                    "on-surface": "#0b1c30",
+                    "on-background": "#0b1c30",
+                    "on-secondary-fixed": "#131b2e",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-secondary-container": "#5c647a",
+                    "tertiary-fixed": "#c4e7ff",
+                    "on-tertiary-fixed": "#001e2c",
+                    "secondary-container": "#dae2fd",
+                    "tertiary-container": "#006285",
+                    "inverse-surface": "#213145",
+                    "secondary-fixed": "#dae2fd",
+                    "primary-container": "#0052cc",
+                    "on-surface-variant": "#434654",
+                    "error-container": "#ffdad6",
+                    "secondary": "#565e74",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-tertiary-container": "#9fdbff",
+                    "tertiary": "#004964",
+                    "background": "#f8f9ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "surface": "#f8f9ff",
+                    "primary-fixed": "#dae2ff",
+                    "on-primary-container": "#c4d2ff",
+                    "inverse-primary": "#b2c5ff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#0040a2",
+                    "tertiary-fixed-dim": "#7bd0ff",
+                    "surface-tint": "#0c56d0",
+                    "surface-dim": "#cbdbf5",
+                    "surface-bright": "#f8f9ff",
+                    "outline": "#737685"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "margin": "32px",
+                    "lg": "48px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "caption": ["Manrope"],
+                    "headline-xl": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "headline-lg-mobile": ["Manrope"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #f8f9ff; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-active {
+            @apply bg-surface-container-high text-primary border-r-4 border-primary;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- TopNavBar (Fixed) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin py-md bg-surface-container-lowest border-b border-outline-variant shadow-sm h-20">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="clinical_notes">clinical_notes</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">MedScan Radiology</span>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="text-secondary hover:text-primary transition-colors font-body-md" href="#">Services</a>
+<a class="text-secondary hover:text-primary transition-colors font-body-md" href="#">Appointments</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="#">Patient Portal</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="material-symbols-outlined p-xs text-on-surface-variant hover:bg-surface-container rounded-full transition-all" data-icon="notifications">notifications</button>
+<div class="h-10 w-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-fixed font-bold">SP</div>
+<button class="bg-primary text-on-primary px-margin py-2 rounded-lg font-label-md hover:opacity-90 transition-all active:scale-95">Book Now</button>
+</div>
+</header>
+<div class="flex pt-20 min-h-screen">
+<!-- Dashboard Sidebar -->
+<aside class="w-64 bg-surface-container-lowest border-r border-outline-variant hidden lg:block fixed h-full pt-md">
+<nav class="flex flex-col gap-xs px-sm">
+<a class="flex items-center gap-sm p-md rounded-xl bg-surface-container-high text-primary font-bold transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md">Overview</span>
+</a>
+<a class="flex items-center gap-sm p-md rounded-xl text-on-surface-variant hover:bg-surface-container transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-label-md">Appointments</span>
+</a>
+<a class="flex items-center gap-sm p-md rounded-xl text-on-surface-variant hover:bg-surface-container transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-label-md">Medical Records</span>
+</a>
+<a class="flex items-center gap-sm p-md rounded-xl text-on-surface-variant hover:bg-surface-container transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md">Billing</span>
+</a>
+<div class="my-md border-t border-outline-variant opacity-50"></div>
+<a class="flex items-center gap-sm p-md rounded-xl text-on-surface-variant hover:bg-surface-container transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-sm p-md rounded-xl text-error hover:bg-error-container transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-label-md">Sign Out</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 p-margin md:p-lg lg:p-xl">
+<!-- Header Section -->
+<section class="mb-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface">Welcome back, Sarah</h1>
+<p class="font-body-lg text-on-surface-variant mt-xs">Your health profile is up to date. You have 2 new notifications.</p>
+</div>
+<div class="flex items-center gap-sm text-on-surface-variant bg-surface-container-low px-md py-sm rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="font-label-md">Secure Patient Access</span>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-gutter items-start">
+<!-- Main Activity Column -->
+<div class="xl:col-span-2 space-y-lg">
+<!-- Action Required Card -->
+<div class="bg-primary-container text-white p-lg rounded-xl shadow-lg relative overflow-hidden group">
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div class="max-w-md">
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined animate-pulse" data-icon="error">error</span>
+<span class="font-label-md">Action Required</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-xs">Pending Appointment Confirmation</h2>
+<p class="font-body-md opacity-90 mb-md">Dr. Michael Chen’s availability has been updated for your scheduled MRI follow-up. Please confirm your 10:30 AM slot on Oct 12th.</p>
+<div class="flex gap-sm">
+<button class="bg-white text-primary px-lg py-sm rounded-lg font-label-md hover:bg-opacity-90 transition-all">Confirm Now</button>
+<button class="border border-white/40 text-white px-lg py-sm rounded-lg font-label-md hover:bg-white/10 transition-all">Reschedule</button>
+</div>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-white/20 text-[120px]" data-icon="event_available">event_available</span>
+</div>
+</div>
+<!-- Abstract medical pattern overlay -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+</div>
+<!-- Recent Diagnostic Scans Table -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<div class="px-lg py-md border-b border-outline-variant flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-primary">Recent Diagnostic Scans</h3>
+<button class="text-primary font-label-md flex items-center gap-xs hover:underline transition-all">
+                                View History <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low border-b border-outline-variant">
+<tr>
+<th class="px-lg py-md font-label-md text-on-surface-variant">Scan Type</th>
+<th class="px-lg py-md font-label-md text-on-surface-variant">Date</th>
+<th class="px-lg py-md font-label-md text-on-surface-variant">Location</th>
+<th class="px-lg py-md font-label-md text-on-surface-variant">Status</th>
+<th class="px-lg py-md font-label-md text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container transition-colors">
+<td class="px-lg py-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="radiology">radiology</span>
+</div>
+<span class="font-body-md font-bold">Chest X-Ray</span>
+</div>
+</td>
+<td class="px-lg py-md font-body-md text-on-surface-variant">Oct 05, 2024</td>
+<td class="px-lg py-md font-body-md text-on-surface-variant">Main Campus</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center gap-xs px-sm py-1 rounded-full bg-emerald-100 text-emerald-800 text-[12px] font-bold">
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                                                Ready
+                                            </span>
+</td>
+<td class="px-lg py-md text-right">
+<button class="text-primary font-label-md hover:bg-primary-container/10 px-md py-2 rounded-lg transition-all">View Report</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="px-lg py-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<span class="font-body-md font-bold">Brain MRI</span>
+</div>
+</td>
+<td class="px-lg py-md font-body-md text-on-surface-variant">Oct 09, 2024</td>
+<td class="px-lg py-md font-body-md text-on-surface-variant">Precision Wing</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center gap-xs px-sm py-1 rounded-full bg-amber-100 text-amber-800 text-[12px] font-bold">
+<span class="w-2 h-2 rounded-full bg-amber-600 animate-pulse"></span>
+                                                Pending
+                                            </span>
+</td>
+<td class="px-lg py-md text-right">
+<button class="text-on-surface-variant font-label-md cursor-not-allowed px-md py-2" disabled="">Processing...</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="px-lg py-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="cardiology">cardiology</span>
+</div>
+<span class="font-body-md font-bold">CT Angiogram</span>
+</div>
+</td>
+<td class="px-lg py-md font-body-md text-on-surface-variant">Sep 28, 2024</td>
+<td class="px-lg py-md font-body-md text-on-surface-variant">Main Campus</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center gap-xs px-sm py-1 rounded-full bg-emerald-100 text-emerald-800 text-[12px] font-bold">
+<span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                                                Ready
+                                            </span>
+</td>
+<td class="px-lg py-md text-right">
+<button class="text-primary font-label-md hover:bg-primary-container/10 px-md py-2 rounded-lg transition-all">View Report</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Sidebar / Insights Column -->
+<div class="space-y-gutter">
+<h3 class="font-headline-md text-headline-md text-on-surface">Clinic Health Insights</h3>
+<!-- Insight Card 1: Expert Consultation -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl hover:shadow-md transition-all group">
+<div class="w-12 h-12 bg-surface-container-high rounded-full flex items-center justify-center text-primary mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="clinical_notes">clinical_notes</span>
+</div>
+<h4 class="font-label-md text-on-surface mb-xs uppercase tracking-wider">Expert Consultation</h4>
+<p class="font-body-md text-on-surface-variant mb-md">Our board-certified radiologists are available for video follow-ups to discuss your scan results in detail.</p>
+<a class="inline-flex items-center gap-xs text-primary font-bold font-label-md" href="#">
+                            Schedule Call <span class="material-symbols-outlined text-[18px]" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<!-- Insight Card 2: Tech Excellence -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-all">
+<div class="h-32 bg-surface-variant relative overflow-hidden">
+<img alt="Diagnostic Technology" class="w-full h-full object-cover opacity-80" data-alt="A clean, futuristic medical diagnostic room featuring a high-end MRI machine in a minimalist white clinical setting. The lighting is bright and hospital-pure with cool blue undertones. A sense of technological precision and extreme cleanliness is conveyed through the high-fidelity surfaces and sharp geometric lines of the equipment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCygMADtmLXMV0kQ1avdx1CahIkyKiPJWaGLHV_gmJL-t-We7kuisxwv2MJuC0wXPutWus_QdUSrnEnijn2ekllUYzMycaMENBiVCetm4T9VOmvxuWdWx0VIV_oit4wKRuOI2WFfnyasQOOEBcxkrBC7VpUnNONPFqsqptHqu7Uslr7HtSap6EVB7csJSq_Tn--mC5eLfQUdGqeRBymrtLQFSuea2xnKmhotdoGcj3CyjK7iWi2cNifUPWLgsx-Dwzj0dKgHT49n90"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-md left-md">
+<span class="bg-primary text-white text-[10px] px-sm py-1 rounded-full font-bold uppercase">New Tech</span>
+</div>
+</div>
+<div class="p-md">
+<h4 class="font-label-md text-on-surface mb-xs uppercase tracking-wider">Tech Excellence</h4>
+<p class="font-body-md text-on-surface-variant">We’ve recently upgraded to AI-enhanced imaging, reducing scan times by 40% while doubling resolution.</p>
+</div>
+</div>
+<!-- Insight Card 3: Data Privacy -->
+<div class="bg-secondary-container/30 border border-secondary-container p-md rounded-xl flex items-start gap-md">
+<span class="material-symbols-outlined text-primary" data-icon="encrypted">encrypted</span>
+<div>
+<h4 class="font-label-md text-on-secondary-fixed-variant">Data Privacy</h4>
+<p class="font-caption text-on-secondary-container mt-xs">Your medical data is encrypted with AES-256 standards. We never share your records with third parties without explicit consent.</p>
+</div>
+</div>
+<!-- Support Card -->
+<div class="bg-surface-container-highest p-md rounded-xl text-center">
+<h4 class="font-headline-md text-on-surface-variant mb-sm">Need Help?</h4>
+<p class="font-body-md text-on-surface-variant mb-md text-sm">Our patient support team is available 24/7 for technical assistance.</p>
+<button class="w-full py-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">Contact Support</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container border-t border-outline-variant w-full relative z-10">
+<div class="w-full px-margin py-lg flex flex-col md:flex-row justify-between items-start gap-gutter max-w-7xl mx-auto">
+<div class="max-w-xs">
+<div class="flex items-center gap-xs mb-md">
+<span class="material-symbols-outlined text-on-surface text-2xl" data-icon="clinical_notes">clinical_notes</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">MedScan</span>
+</div>
+<p class="font-caption text-on-surface-variant">© 2024 MedScan Radiology Center. All rights reserved. Clinical excellence through precision imaging.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-lg">
+<div class="flex flex-col gap-xs">
+<span class="font-label-md text-on-surface-variant mb-xs">Patient Resources</span>
+<a class="font-body-md text-on-surface-variant hover:text-primary underline transition-all" href="#">Patient Rights</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary underline transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary underline transition-all" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-xs">
+<span class="font-label-md text-on-surface-variant mb-xs">Company</span>
+<a class="font-body-md text-on-surface-variant hover:text-primary underline transition-all" href="#">Locations</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary underline transition-all" href="#">Careers</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary underline transition-all" href="#">Contact Us</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- FAB (Suppressed on Dashboard as per guidelines but added placeholder if needed for context) -->
+<!-- The FAB is suppressed on Profile/Details/Transactional screens, keeping the focus on content. -->
+<script>
+        // Micro-interactions
+        document.querySelectorAll('.hover\\:bg-surface-container').forEach(row => {
+            row.addEventListener('mouseenter', () => {
+                row.style.transform = 'translateX(4px)';
+                row.style.transition = 'all 0.2s ease';
+            });
+            row.addEventListener('mouseleave', () => {
+                row.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Imaging Services | RadiologyCenter</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "primary-fixed": "#dae2ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#004964",
+                        "inverse-primary": "#b2c5ff",
+                        "background": "#f8f9ff",
+                        "tertiary-container": "#006285",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#d3e4fe",
+                        "outline": "#737685",
+                        "surface-dim": "#cbdbf5",
+                        "surface-container": "#e5eeff",
+                        "outline-variant": "#c3c6d6",
+                        "tertiary-fixed": "#c4e7ff",
+                        "on-tertiary-container": "#9fdbff",
+                        "primary-container": "#0052cc",
+                        "tertiary-fixed-dim": "#7bd0ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#c4d2ff",
+                        "on-tertiary-fixed-variant": "#004c69",
+                        "error": "#ba1a1a",
+                        "primary": "#003d9b",
+                        "secondary-container": "#dae2fd",
+                        "on-secondary-container": "#5c647a",
+                        "surface-tint": "#0c56d0",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#b2c5ff",
+                        "on-surface": "#0b1c30",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "surface-container-high": "#dce9ff",
+                        "on-primary-fixed-variant": "#0040a2",
+                        "surface-variant": "#d3e4fe",
+                        "secondary-fixed": "#dae2fd",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container-low": "#eff4ff",
+                        "on-secondary-fixed": "#131b2e",
+                        "on-background": "#0b1c30",
+                        "secondary": "#565e74",
+                        "inverse-surface": "#213145",
+                        "on-tertiary-fixed": "#001e2c",
+                        "surface": "#f8f9ff",
+                        "on-primary-fixed": "#001848",
+                        "on-surface-variant": "#434654"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "margin": "32px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "headline-xl": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "caption": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-4 h-16 w-full max-w-full md:max-w-none mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">RadiologyCenter</h1>
+</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-md text-primary font-bold" href="#">Services</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Appointments</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Results</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md active:scale-95 transition-transform">Book Now</button>
+</header>
+<main class="pt-24 pb-xl px-4 md:px-margin max-w-7xl mx-auto">
+<!-- Hero / Intro -->
+<section class="mb-xl text-center max-w-3xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-md">Our Imaging Services</h2>
+<p class="font-body-lg text-body-lg text-secondary">Providing clinical precision and patient-centered care through state-of-the-art diagnostic imaging technology.</p>
+</section>
+<!-- Category: Diagnostic -->
+<section class="mb-xl">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary text-headline-md">biotech</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Diagnostic Imaging</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- X-Ray Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl service-card-hover transition-all flex flex-col h-full">
+<div class="h-48 overflow-hidden rounded-lg mb-md bg-surface-container">
+<img alt="X-Ray Machine" class="w-full h-full object-cover" data-alt="A clean, clinical close-up of a modern digital X-ray machine in a brightly lit medical suite. The atmosphere is professional and sterile, featuring high-key lighting and a soft color palette of whites and medical blues. The focus is on the precision-engineered equipment, conveying a sense of advanced diagnostic technology and clinical accuracy within a modern Radiology center." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgHe6LEmmw3wFbjJ39tjr43ziW5fsvMOJPO5bQQmL2pDm3g7ZBI1BT-0YlEWeDvMyM3KSv9-6soGY36Gm_xkFGdkdBxLHq04yofIMY__6P7JT_6BiroFryCkxUB7qU373a0lU9R1IFod4SVsEddVtih-uRAoGWmkhT3FyC-fbkUKMIXdYu9Akp85ZfSKAzKcFQIj1OEQ5cZ0Ob5ELgOED2kAdc4V-l5NWiLVmP2poMDqDvE7ujlg4cSTXsI2MHx13bLMjXVhNStXA"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-sm">X-Ray</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">Fast and efficient imaging for bone health, chest examinations, and dental diagnostics.</p>
+<div class="flex gap-sm">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-lg font-label-md hover:bg-primary-container transition-colors">Book</button>
+<button class="flex-1 border border-secondary text-secondary py-3 rounded-lg font-label-md hover:bg-secondary-container/10 transition-colors">Learn More</button>
+</div>
+</div>
+<!-- Ultrasound Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl service-card-hover transition-all flex flex-col h-full">
+<div class="h-48 overflow-hidden rounded-lg mb-md bg-surface-container">
+<img alt="Ultrasound" class="w-full h-full object-cover" data-alt="A highly detailed close-up of an ultrasound transducer being used on a patient's abdomen in a dimly lit, calming medical environment. The screen in the background shows a clear, high-resolution diagnostic image in grayscale. The lighting is soft and focused, emphasizing the gentle, patient-centered care provided by the medical professional. The overall aesthetic is clean, sophisticated, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADaofBGQX_fMbCk6kzNu3mp1Z0SbFOmm1EPpefToEtripOslaeajComS28VMohPJnEqUD2TF6CGv7WdokVAaXSIaNHhPnbaJc6J4I7v1NIHQFhG9NIDKSVmyCDkz5daMUsQm6NOQg8B3odwlUDzABNQ0ehO19BXzl4qkqpiVrmXFiG_yDMl-jkZtRgQnv7rvRpGHcKn5BPvkFbiDIK8WYNeOWcEyYGX69-pR51EnJf6VYj_j3hZa0rRzaP9AgxUWZSYOYi6sM1RCM"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-sm">Ultrasound</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">Non-invasive sonar imaging for pregnancy, vascular health, and internal organ assessment.</p>
+<div class="flex gap-sm">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-lg font-label-md hover:bg-primary-container transition-colors">Book</button>
+<button class="flex-1 border border-secondary text-secondary py-3 rounded-lg font-label-md hover:bg-secondary-container/10 transition-colors">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Advanced -->
+<section class="mb-xl">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary text-headline-md">psychology</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Advanced Imaging</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- MRI Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl service-card-hover transition-all flex flex-col h-full">
+<div class="h-48 overflow-hidden rounded-lg mb-md bg-surface-container">
+<img alt="MRI Scanner" class="w-full h-full object-cover" data-alt="A wide-angle shot of a state-of-the-art MRI scanner in a spacious, futuristic medical room. The room features architectural lighting with cool blue and crisp white tones, creating a calm and professional atmosphere. The equipment is pristine and high-tech, symbolizing the peak of diagnostic precision. The floor is reflective, adding to the clean, high-fidelity corporate modern aesthetic of the facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN57c2C2rlTweU_UnMorcqbw5x7Vd27MKAYReGsVd_6mxOYF9MXb174KVBQ_jqIDj_Gtyw7uanfOAVSIXcyK69QyW8TtqDebiJfu4jic8AiXabm4p6ZNs7_yXXMhXUQFcV2RdJ7m4SDDKGMrchUQbD0HwAsxUSiGRmw0vrsOnAb-jt4L4pe6qRjnl-e8ONCTLcE44GSN1ngKqj9lb9AS_U1pWUEvchYKrRrqEl3muyPXYjVOMsq7b5YGrhszjmDmdV4x0-oM_rNLc"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-sm">MRI Scan</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">Detailed 3D mapping of soft tissues, nerves, and joints using powerful magnetic resonance.</p>
+<div class="flex gap-sm">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-lg font-label-md hover:bg-primary-container transition-colors">Book</button>
+<button class="flex-1 border border-secondary text-secondary py-3 rounded-lg font-label-md hover:bg-secondary-container/10 transition-colors">Learn More</button>
+</div>
+</div>
+<!-- CT Scan Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl service-card-hover transition-all flex flex-col h-full">
+<div class="h-48 overflow-hidden rounded-lg mb-md bg-surface-container">
+<img alt="CT Scanner" class="w-full h-full object-cover" data-alt="A clinical photograph of a CT scanner in operation within a modern, minimalist imaging department. The lighting is bright and even, highlighting the sleek design of the gantry. The color palette is dominated by sterile whites and navy blue accents, conveying a sense of absolute clarity and medical professionalism. The environment is organized and peaceful, designed to reassure patients during high-tech diagnostic procedures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB14h890I6tAIycEaaKabEFGDjEjW_Mmi4h1sPlorSAcSCYWKy2tEg8DuMDgcK5TkqmTHwn3eoe5EHLWaIkUD8pBVIB9PsfUVUOSNlHvZH01R_zJTsyaRrRCDBvYuggO8dunchU4TpXwRVpXbMskOaXCc8PVoUwIcbFjGfq3vagKb3Q5qtnd_0rl72evdaSp5u7acbwMluML2ieXKIYb-ynqaujmqvo8LmOplOArrFp-UXGY23QbJmIbJ6uuc6CCpDH5aClb0HCvzk"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-sm">CT Scan</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">High-speed cross-sectional imaging for acute trauma, cardiovascular health, and oncology.</p>
+<div class="flex gap-sm">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-lg font-label-md hover:bg-primary-container transition-colors">Book</button>
+<button class="flex-1 border border-secondary text-secondary py-3 rounded-lg font-label-md hover:bg-secondary-container/10 transition-colors">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Category: Specialized -->
+<section class="mb-xl">
+<div class="flex items-center gap-sm mb-md">
+<span class="material-symbols-outlined text-primary text-headline-md">health_and_safety</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Specialized Services</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Mammography Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl service-card-hover transition-all flex flex-col h-full">
+<div class="h-48 overflow-hidden rounded-lg mb-md bg-surface-container">
+<img alt="Mammography" class="w-full h-full object-cover" data-alt="A sophisticated mammography machine in a private, warm-toned screening room. The room is designed with soft, empathetic lighting and light wood textures to create a comfortable, reassuring atmosphere for patients. The imaging equipment itself is sleek and modern, finished in medical white. The aesthetic balances high-end medical technology with a welcoming, patient-first interior design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPX7yuWZtgks0WK4MPPgcJCD2TdM3BCTLe6CCS9cp99VeKMEDC8LRjG4x4Ci2EGLZef7yZusxHZ8ycFYHWY0n1QCW7Gz5cU1sdqTEwx88PMg3FIgLLopHRWy62uUvQzLoGEL1BwFBcz4WKhMOBLXVXbnZg3XGDzAGPjjvQ1piSlxeXva5zfx-5zdX1HHz_G3oJ8OaUCMjVqIJUkAQh98qJbNQ-HO6MqQlCBmcVmCCnUeGDBoqF3EQ45o3LMZtMY0n9qNuifK0HJqQ"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-sm">Mammography</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">Comprehensive breast health screening using low-dose 3D tomosynthesis technology.</p>
+<div class="flex gap-sm">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-lg font-label-md hover:bg-primary-container transition-colors">Book</button>
+<button class="flex-1 border border-secondary text-secondary py-3 rounded-lg font-label-md hover:bg-secondary-container/10 transition-colors">Learn More</button>
+</div>
+</div>
+<!-- DEXA Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded-xl service-card-hover transition-all flex flex-col h-full">
+<div class="h-48 overflow-hidden rounded-lg mb-md bg-surface-container">
+<img alt="DEXA Scan" class="w-full h-full object-cover" data-alt="A wide-angle view of a bone density scanner (DEXA) in a clean, professional medical lab. The room is brightly lit with natural-feeling light, creating an open and airy feel. The equipment is sleek and low-profile, emphasizing ease of access and patient comfort. The surrounding space is uncluttered, maintaining a clinical but accessible aesthetic that reflects the facility's commitment to preventive health and clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQhCH2y91W9yydYTQBFqGEsZWupwCSOXt93qc4PlO4zklwPKr2pBPrVLnm4QhXWeNtpTd0npD_WHynBwwVwtHcSPlbtx6PzHwaRLhk-h8H0zv5bdSb2ng3T3baUoK-EPCG6OHhLTD0VN0rhUnsY901qUImc_OZi698uHgcLjoG6fE8tx_VHcKLyPQ2c-xMuhXm7IRhJd7CTu0q5EvoPfqPQocpAQX_Lry_0dyF9yBHY6AcYdHEBBfhH4Wn1HRg0Whgy0U2ERb3MIk"/>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-sm">DEXA</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg flex-grow">Gold-standard bone density testing for osteoporosis screening and body composition analysis.</p>
+<div class="flex gap-sm">
+<button class="flex-1 bg-primary text-on-primary py-3 rounded-lg font-label-md hover:bg-primary-container transition-colors">Book</button>
+<button class="flex-1 border border-secondary text-secondary py-3 rounded-lg font-label-md hover:bg-secondary-container/10 transition-colors">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low flex flex-col items-center text-center p-gutter mb-20 w-full">
+<h2 class="font-headline-md text-headline-md text-primary mb-md">RadiologyCenter</h2>
+<div class="flex flex-wrap justify-center gap-md mb-md">
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Contact Us</a>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Emergency Support</a>
+<a class="font-body-md text-secondary hover:text-primary transition-colors" href="#">Privacy Policy</a>
+</div>
+<p class="font-body-md text-secondary">© 2024 Radiology Center. Clinical Precision.</p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-2 h-16 bg-surface border-t border-outline-variant shadow-lg">
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-primary bg-primary-container/20 rounded-xl px-3 py-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">medical_services</span>
+<span class="font-label-md text-label-md">Services</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-label-md text-label-md">Appts</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">biotech</span>
+<span class="font-label-md text-label-md">Results</span>
+</div>
+</nav>
+<script>
+        // Micro-interactions for buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
+            btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
+            btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
+        });
+    </script>
+</body></html>

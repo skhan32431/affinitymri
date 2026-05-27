@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Patient Results Portal | RadiologyCenter</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "on-secondary-fixed-variant": "#3f465c",
+                  "primary-fixed": "#dae2ff",
+                  "on-secondary": "#ffffff",
+                  "tertiary": "#004964",
+                  "inverse-primary": "#b2c5ff",
+                  "background": "#f8f9ff",
+                  "tertiary-container": "#006285",
+                  "on-tertiary": "#ffffff",
+                  "surface-container-lowest": "#ffffff",
+                  "on-error": "#ffffff",
+                  "surface-container-highest": "#d3e4fe",
+                  "outline": "#737685",
+                  "surface-dim": "#cbdbf5",
+                  "surface-container": "#e5eeff",
+                  "outline-variant": "#c3c6d6",
+                  "tertiary-fixed": "#c4e7ff",
+                  "on-tertiary-container": "#9fdbff",
+                  "primary-container": "#0052cc",
+                  "tertiary-fixed-dim": "#7bd0ff",
+                  "inverse-on-surface": "#eaf1ff",
+                  "error-container": "#ffdad6",
+                  "on-primary-container": "#c4d2ff",
+                  "on-tertiary-fixed-variant": "#004c69",
+                  "error": "#ba1a1a",
+                  "primary": "#003d9b",
+                  "secondary-container": "#dae2fd",
+                  "on-secondary-container": "#5c647a",
+                  "surface-tint": "#0c56d0",
+                  "on-error-container": "#93000a",
+                  "primary-fixed-dim": "#b2c5ff",
+                  "on-surface": "#0b1c30",
+                  "secondary-fixed-dim": "#bec6e0",
+                  "surface-container-high": "#dce9ff",
+                  "on-primary-fixed-variant": "#0040a2",
+                  "surface-variant": "#d3e4fe",
+                  "secondary-fixed": "#dae2fd",
+                  "on-primary": "#ffffff",
+                  "surface-bright": "#f8f9ff",
+                  "surface-container-low": "#eff4ff",
+                  "on-secondary-fixed": "#131b2e",
+                  "on-background": "#0b1c30",
+                  "secondary": "#565e74",
+                  "inverse-surface": "#213145",
+                  "on-tertiary-fixed": "#001e2c",
+                  "surface": "#f8f9ff",
+                  "on-primary-fixed": "#001848",
+                  "on-surface-variant": "#434654"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "gutter": "24px",
+                  "sm": "12px",
+                  "xl": "80px",
+                  "md": "24px",
+                  "margin": "32px",
+                  "base": "8px",
+                  "xs": "4px",
+                  "lg": "48px"
+          },
+          "fontFamily": {
+                  "headline-lg-mobile": ["Manrope"],
+                  "body-lg": ["Manrope"],
+                  "headline-xl": ["Manrope"],
+                  "label-md": ["Manrope"],
+                  "headline-md": ["Manrope"],
+                  "caption": ["Manrope"],
+                  "body-md": ["Manrope"],
+                  "headline-lg": ["Manrope"]
+          },
+          "fontSize": {
+                  "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                  "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                  "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                  "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                  "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                  "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                  "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                  "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body { font-family: 'Manrope', sans-serif; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-4 h-16 w-full max-w-7xl mx-auto left-0 right-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">RadiologyCenter</h1>
+</div>
+<div class="hidden md:flex gap-6 items-center">
+<nav class="flex gap-4">
+<a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors px-2 py-1 rounded" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors px-2 py-1 rounded" href="#">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-low transition-colors px-2 py-1 rounded" href="#">Appointments</a>
+<a class="font-label-md text-label-md text-primary font-bold px-2 py-1 rounded" href="#">Results</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md active:scale-95 transition-transform">Book Now</button>
+</div>
+<div class="md:hidden">
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md text-label-md">Book Now</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-7xl mx-auto">
+<!-- Welcome Section -->
+<div class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Welcome back, Sarah</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Your latest diagnostic results and medical imaging are ready for review.</p>
+</div>
+<!-- Results Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Summary Card (Left/Top) -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="bg-surface-container-low border border-outline-variant p-md rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-md">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary" data-icon="notifications">notifications</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Action Required</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">You have 1 pending appointment confirmation and 2 new reports available.</p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors">View All Tasks</button>
+</div>
+<div class="bg-white border border-outline-variant p-md rounded-xl shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[80px]" data-icon="security">security</span>
+</div>
+<h3 class="font-label-md text-label-md text-primary mb-2 uppercase tracking-widest">Privacy Guard</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Your medical records are encrypted using clinical-grade security protocols.</p>
+</div>
+</div>
+<!-- Recent Results Table/List (Right/Main) -->
+<div class="md:col-span-8">
+<div class="bg-white border border-outline-variant rounded-xl shadow-sm overflow-hidden">
+<div class="p-md border-b border-outline-variant flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-on-surface">Recent Diagnostic Scans</h3>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="filter_list">filter_list</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="search">search</span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-md text-label-md">
+<th class="px-md py-4">Scan Type</th>
+<th class="px-md py-4">Date</th>
+<th class="px-md py-4">Status</th>
+<th class="px-md py-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Result Item 1 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-md py-6">
+<div class="flex items-center gap-3">
+<div class="bg-secondary-container p-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="chest_xray">radiology</span>
+</div>
+<div>
+<p class="font-headline-md text-[18px] text-on-surface">Chest X-Ray PA View</p>
+<p class="font-caption text-caption text-on-surface-variant">ID: RX-88291</p>
+</div>
+</div>
+</td>
+<td class="px-md py-6 font-body-md text-body-md">Oct 24, 2024</td>
+<td class="px-md py-6">
+<span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                      Ready
+                    </span>
+</td>
+<td class="px-md py-6 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary-container/10 rounded-lg transition-colors" title="Download PDF">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+<button class="p-2 text-primary hover:bg-primary-container/10 rounded-lg transition-colors" title="Share with Doctor">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Result Item 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-md py-6">
+<div class="flex items-center gap-3">
+<div class="bg-secondary-container p-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="biotech">biotech</span>
+</div>
+<div>
+<p class="font-headline-md text-[18px] text-on-surface">Brain MRI with Contrast</p>
+<p class="font-caption text-caption text-on-surface-variant">ID: RX-88304</p>
+</div>
+</div>
+</td>
+<td class="px-md py-6 font-body-md text-body-md">Oct 26, 2024</td>
+<td class="px-md py-6">
+<span class="inline-flex items-center gap-1 bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-[12px] font-bold">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+                      Pending
+                    </span>
+</td>
+<td class="px-md py-6 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-outline-variant cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+<button class="p-2 text-outline-variant cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Result Item 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-md py-6">
+<div class="flex items-center gap-3">
+<div class="bg-secondary-container p-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="radiology">radiology</span>
+</div>
+<div>
+<p class="font-headline-md text-[18px] text-on-surface">Abdominal Ultrasound</p>
+<p class="font-caption text-caption text-on-surface-variant">ID: RX-88110</p>
+</div>
+</div>
+</td>
+<td class="px-md py-6 font-body-md text-body-md">Oct 15, 2024</td>
+<td class="px-md py-6">
+<span class="inline-flex items-center gap-1 bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-bold">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                      Ready
+                    </span>
+</td>
+<td class="px-md py-6 text-right">
+<div class="flex justify-end gap-2">
+<button class="p-2 text-primary hover:bg-primary-container/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+<button class="p-2 text-primary hover:bg-primary-container/10 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-md bg-surface-container-low border-t border-outline-variant text-center">
+<a class="text-primary font-label-md text-label-md hover:underline" href="#">View History (2023-2024)</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Health Insights Section -->
+<section class="mt-xl">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-md">Clinic Health Insights</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="group relative h-64 rounded-2xl overflow-hidden shadow-md">
+<img alt="Consultation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A bright and professional medical consultation room with modern white furniture and a large screen displaying high-resolution anatomical diagrams. The lighting is soft and clinical, using a primary medical blue color palette for calming effects. The atmosphere is quiet, serene, and focused on patient education and clinical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBt5BM5Bd2Q91Jvc0ZhKTXwLlifKQWz6QoSdQXpztR1iTxS8oN_L2s1gYD03bkf9cLfQp2mdj9yMSrQFvgqRpIhlapBcA8w3Z888P5cCZ4J8RGnl4hXplAXZbgHGgg8T2JUVN96NydFFahjdE_Qb62J2s1JHpYKJIEKSUtVNd7V7COvUKjg-phDRiZ-tor-DkRwDtK1Zv9CYYH9pDXMQoXBqMru6SmjL4flmy4DFayPli3Zdq3BHynoeCIdJrsGwxR0YwD9CCwMpQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-md">
+<div>
+<h4 class="text-on-primary font-headline-md text-headline-md mb-1">Expert Consultation</h4>
+<p class="text-on-primary/80 font-body-md text-body-md">Schedule a follow-up with our specialists.</p>
+</div>
+</div>
+</div>
+<div class="group relative h-64 rounded-2xl overflow-hidden shadow-md">
+<img alt="Radiology Tech" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close-up of a state-of-the-art MRI machine in a clean, minimalist medical facility. The lighting is high-key and crisp, highlighting the smooth metallic surfaces and sophisticated technology of the scanner. The room follows a corporate modern aesthetic with deep navy and medical blue accents, projecting a feeling of calm confidence and technological advancement." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJBFCX8Bsc4tmmajlGZNK4i4zfjkmXT8BXLy-Y7KRNadA5z1CVlOGe9kUJNST-cEKFFiyQ-PypSq3iP3bIdtn98wHRW3ctrYsF0odOP7jeOdTxhxo7pPJ36cV6WjE_5qSxY1maVwlr-fC57LLC3PuT3unjOQZBkRjWSMu6Vt8dDAg6Ox3LHg5chc0-hHr6cJ1OSetg20IlMizl-oi8jAA0n8c56-24thOQDLK2WMQYEFmMTiNc3tsH1aCHPDS4nTzU0M4CLUK687M"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary/80 to-transparent flex items-end p-md">
+<div>
+<h4 class="text-on-primary font-headline-md text-headline-md mb-1">Tech Excellence</h4>
+<p class="text-on-primary/80 font-body-md text-body-md">Learn about our ultra-low radiation protocols.</p>
+</div>
+</div>
+</div>
+<div class="group relative h-64 rounded-2xl overflow-hidden shadow-md">
+<img alt="Data Privacy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A conceptual digital image representing secure medical data transmission with abstract glowing blue lines and hexagonal patterns. The visual style is minimalist and clean, utilizing a palette of deep navy and bright clinical blue against a white background. The mood is highly secure, futuristic, and reassures the user of absolute data privacy and mathematical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0WSVXGJq5otA86WleUFwQRQc857rQi-GyOUcx3D7thBeVnvpKvjSOSuyKBv_ShUMHsPrgD6rkrtX1dCSr9mCw4eM2uEBNax54epxRSWH-t4vym5MEFB0W6OGNus9HXQgt19tO7BYGWd_-JPXC0qEToJgC1dUOv2lcjzvbJB0SxZqh9YkHRFixXm2NYFOaC1XCZOiV37n9mrx1wYm-vpAHZQSe3S4t_a_Am_sfViuOGDDpw_GAfXJdC8BRItu68n_XHlUfatzjuxQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 to-transparent flex items-end p-md">
+<div>
+<h4 class="text-on-primary font-headline-md text-headline-md mb-1">Your Privacy</h4>
+<p class="text-on-primary/80 font-body-md text-body-md">Learn how we protect your clinical data.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 pb-2 h-16 bg-surface border-t border-outline-variant shadow-lg rounded-t-xl">
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all rounded-xl px-3 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-[10px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all rounded-xl px-3 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+<span class="font-label-md text-[10px]">Services</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all rounded-xl px-3 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-label-md text-[10px]">Appointments</span>
+</div>
+<div class="flex flex-col items-center justify-center text-primary bg-primary-container/20 rounded-xl px-3 py-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+<span class="font-label-md text-[10px]">Results</span>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-low flex flex-col items-center text-center p-gutter mb-20 md:mb-0">
+<div class="font-headline-md text-headline-md text-primary font-bold mb-md">RadiologyCenter</div>
+<div class="flex gap-md mb-md">
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Contact Us</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Emergency Support</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+</div>
+<p class="font-body-md text-body-md text-primary font-semibold">© 2024 Radiology Center. Clinical Precision.</p>
+</footer>
+<script>
+    // Micro-interaction for result action buttons
+    document.querySelectorAll('button').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        if(!this.disabled) {
+          const ripple = document.createElement('span');
+          ripple.classList.add('ripple');
+          this.appendChild(ripple);
+          setTimeout(() => ripple.remove(), 600);
+        }
+      });
+    });
+  </script>
+</body></html>
