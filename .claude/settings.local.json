@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx playwright:*)",
+      "Bash(pip show:*)",
+      "Bash(node -e \"const { chromium } = require\\('playwright'\\); console.log\\('playwright module ok'\\)\")",
+      "Bash(npm install:*)",
+      "Read(//Users/shahzaibkhan/Documents/claude/**)",
+      "Read(//Users/shahzaibkhan/Desktop/**)",
+      "WebFetch(domain:affinitymri.com)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "Bash(npx skills:*)",
+      "Bash(npx claude-mem:*)",
+      "Bash(npx impeccable:*)",
+      "WebFetch(domain:blog.google)",
+      "Read(//Users/shahzaibkhan/.stitch-mcp/**)",
+      "Read(//var/root/.config/**)",
+      "Bash(~/.stitch-mcp/google-cloud-sdk/bin/gcloud auth:*)",
+      "Bash(~/.stitch-mcp/google-cloud-sdk/bin/gcloud config:*)",
+      "Read(//Users/shahzaibkhan/repos/**)",
+      "Read(//Users/shahzaibkhan/**)",
+      "Bash(git init:*)",
+      "Bash(gh auth:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)"
+    ]
+  }
+}
