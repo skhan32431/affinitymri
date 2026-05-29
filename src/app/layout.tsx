@@ -5,6 +5,7 @@ import { TopBar } from "@/components/layout/top-bar";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MobileCta } from "@/components/layout/mobile-cta";
+import { SmoothScroll } from "@/components/ui/smooth-scroll";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -96,6 +97,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <MobileCta />
+        <SmoothScroll />
       </body>
     </html>
   );
