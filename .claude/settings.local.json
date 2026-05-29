@@ -44,7 +44,8 @@
       "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2016/03/Oasis-Profile-RT-Low_Clouds_0274-1280x800.jpg\" -o public/open-mri.jpg)",
       "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2017/06/3t.jpg\" -o public/3t-mri.jpg)",
       "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2016/03/CT.jpeg\" -o public/pet-ct.jpg)",
-      "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2017/06/Xray.jpeg\" -o public/xray.jpg)"
+      "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2017/06/Xray.jpeg\" -o public/xray.jpg)",
+      "Bash(git commit:*)"
     ]
   }
 }
