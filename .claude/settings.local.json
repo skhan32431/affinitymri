@@ -23,7 +23,28 @@
       "Bash(git init:*)",
       "Bash(gh auth:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m ':*)"
+      "Bash(git commit -m ':*)",
+      "Bash(gh repo:*)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)",
+      "Bash(git push:*)",
+      "Bash(git config:*)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm run:*)",
+      "Bash(npx next:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3001)",
+      "Bash(curl -s http://localhost:3001)",
+      "Bash(kill 78803)",
+      "Bash(lsof -ti:3001)",
+      "Bash(xargs kill:*)",
+      "Bash(lsof -ti:3000)",
+      "Bash(lsof -ti:3001 -ti:3002 -ti:3003)",
+      "Bash(curl -v http://localhost:3001)",
+      "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2025/10/new__hrc__logo-new.jpg\" -o public/logo.jpg)",
+      "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2016/03/Oasis-Profile-RT-Low_Clouds_0274-1280x800.jpg\" -o public/open-mri.jpg)",
+      "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2017/06/3t.jpg\" -o public/3t-mri.jpg)",
+      "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2016/03/CT.jpeg\" -o public/pet-ct.jpg)",
+      "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2017/06/Xray.jpeg\" -o public/xray.jpg)"
     ]
   }
 }
