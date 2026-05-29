@@ -143,6 +143,11 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+}
+
 body {
   background: var(--color-surface);
   color: var(--color-on-surface);
