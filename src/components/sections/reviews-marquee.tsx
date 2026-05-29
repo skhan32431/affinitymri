@@ -36,39 +36,38 @@ function Stars({ count }: { count: number }) {
 
 function ReviewCard({ review }: { review: typeof reviewsRow1[0] }) {
   return (
-    <div className="shrink-0 w-[340px] bg-white rounded-2xl p-6 border border-outline-variant/40 shadow-[0_2px_12px_rgba(0,0,0,0.03)]">
+    <div className="shrink-0 w-[240px] sm:w-[300px] md:w-[340px] bg-white rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-outline-variant/40 shadow-[0_2px_12px_rgba(0,0,0,0.03)]">
       <Stars count={review.rating} />
-      <p className="text-sm text-on-surface-variant leading-[1.7] mt-3 mb-4">
+      <p className="text-xs sm:text-sm text-on-surface-variant leading-[1.7] mt-2 sm:mt-3 mb-3 sm:mb-4 line-clamp-4">
         &ldquo;{review.text}&rdquo;
       </p>
       <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-full bg-primary/8 flex items-center justify-center text-primary text-xs font-bold">
+        <div className="flex items-center gap-2">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-primary/8 flex items-center justify-center text-primary text-[10px] sm:text-xs font-bold">
             {review.name.charAt(0)}
           </div>
-          <span className="text-sm font-semibold text-on-surface">{review.name}</span>
+          <span className="text-xs sm:text-sm font-semibold text-on-surface">{review.name}</span>
         </div>
-        <span className="text-[10px] font-medium text-on-surface-variant/60 uppercase tracking-wider">{review.source}</span>
+        <span className="text-[9px] sm:text-[10px] font-medium text-on-surface-variant/60 uppercase tracking-wider">{review.source}</span>
       </div>
     </div>
   );
 }
 
 function MarqueeRow({ reviews, direction }: { reviews: typeof reviewsRow1; direction: "left" | "right" }) {
-  // 8 cards × (340px + 20px gap) = 2880px per set
-  // At 40px/s → 72s for one full cycle
-  const totalWidth = reviews.length * (340 + 20);
-  const speed = 40; // pixels per second — consistent across rows
+  // Use mid-size card width for duration calculation (300px + 16px gap)
+  const totalWidth = reviews.length * (300 + 16);
+  const speed = 35; // pixels per second
   const duration = totalWidth / speed;
 
   return (
     <div className="relative overflow-hidden">
       {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface-low to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface-low to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-surface-low to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-surface-low to-transparent z-10 pointer-events-none" />
 
       <div
-        className="flex gap-5 hover:[animation-play-state:paused]"
+        className="flex gap-3 sm:gap-4 md:gap-5 hover:[animation-play-state:paused]"
         style={{
           animation: `${direction === "left" ? "marqueeLeft" : "marqueeRight"} ${duration}s linear infinite`,
         }}
