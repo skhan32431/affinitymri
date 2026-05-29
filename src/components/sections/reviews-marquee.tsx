@@ -55,7 +55,11 @@ function ReviewCard({ review }: { review: typeof reviewsRow1[0] }) {
 }
 
 function MarqueeRow({ reviews, direction }: { reviews: typeof reviewsRow1; direction: "left" | "right" }) {
-  const animationClass = direction === "left" ? "animate-marquee-left" : "animate-marquee-right";
+  // 8 cards × (340px + 20px gap) = 2880px per set
+  // At 40px/s → 72s for one full cycle
+  const totalWidth = reviews.length * (340 + 20);
+  const speed = 40; // pixels per second — consistent across rows
+  const duration = totalWidth / speed;
 
   return (
     <div className="relative overflow-hidden">
@@ -63,7 +67,12 @@ function MarqueeRow({ reviews, direction }: { reviews: typeof reviewsRow1; direc
       <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-surface-low to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-surface-low to-transparent z-10 pointer-events-none" />
 
-      <div className={`flex gap-5 ${animationClass}`}>
+      <div
+        className="flex gap-5 hover:[animation-play-state:paused]"
+        style={{
+          animation: `${direction === "left" ? "marqueeLeft" : "marqueeRight"} ${duration}s linear infinite`,
+        }}
+      >
         {/* Duplicate for seamless loop */}
         {[...reviews, ...reviews].map((review, i) => (
           <ReviewCard key={`${review.name}-${i}`} review={review} />
