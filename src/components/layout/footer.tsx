@@ -29,9 +29,15 @@ export function Footer() {
           <div>
             <h6 className="text-xs font-semibold text-on-surface uppercase tracking-[0.15em] mb-4">Services</h6>
             <div className="flex flex-col gap-2.5">
-              {["MRI", "PET/CT", "Digital X-Ray", "Ultrasound", "DEXA"].map((s) => (
-                <Link key={s} href={`/services#${s.toLowerCase().replace(/[/ ]/g, "")}`} className="text-sm text-on-surface-variant hover:text-primary transition-colors">
-                  {s}
+              {[
+                { label: "MRI", id: "mri" },
+                { label: "PET/CT", id: "petct" },
+                { label: "Digital X-Ray", id: "xray" },
+                { label: "Ultrasound", id: "ultrasound" },
+                { label: "DEXA", id: "dexa" },
+              ].map((s) => (
+                <Link key={s.id} href={`/services#${s.id}`} className="text-sm text-on-surface-variant hover:text-primary transition-colors">
+                  {s.label}
                 </Link>
               ))}
             </div>
