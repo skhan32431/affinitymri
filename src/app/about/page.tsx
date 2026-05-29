@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
+import { CountUp } from "@/components/ui/count-up";
 
 const values = [
   {
@@ -26,10 +27,10 @@ const values = [
 ];
 
 const stats = [
-  { value: "10+", label: "Years Serving NJ" },
-  { value: "40+", label: "Insurance Plans Accepted" },
-  { value: "12", label: "Board-Certified Radiologists" },
-  { value: "6", label: "Imaging Services" },
+  { value: 10, suffix: "+", label: "Years Serving NJ" },
+  { value: 40, suffix: "+", label: "Insurance Plans Accepted" },
+  { value: 12, suffix: "", label: "Board-Certified Radiologists" },
+  { value: 6, suffix: "", label: "Imaging Services" },
 ];
 
 export default function AboutPage() {
@@ -91,7 +92,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <div className="text-3xl md:text-4xl font-extrabold tracking-tight mb-1">{stat.value}</div>
+                <div className="text-3xl md:text-4xl font-extrabold tracking-tight mb-1">
+                  <CountUp value={stat.value} suffix={stat.suffix} />
+                </div>
                 <div className="text-sm text-white/70">{stat.label}</div>
               </div>
             ))}
