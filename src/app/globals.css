@@ -165,3 +165,12 @@ body {
 .btn-press:active {
   transform: scale(0.97);
 }
+
+/* Safe area for mobile CTA bar */
+@media (max-width: 639px) {
+  footer { padding-bottom: 72px; }
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}

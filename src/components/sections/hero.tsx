@@ -27,7 +27,7 @@ const trustItems = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-white pt-[72px] overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center bg-white pt-[104px] overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <Image

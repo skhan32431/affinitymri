@@ -11,7 +11,7 @@ const services = [
 
 export default function AppointmentsPage() {
   return (
-    <div className="pt-[72px]">
+    <div className="pt-[104px]">
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-3xl mx-auto px-5 md:px-10">
           <div className="text-center mb-12 hero-enter">

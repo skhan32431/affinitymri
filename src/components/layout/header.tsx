@@ -5,11 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navLinks = [
+  { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/appointments", label: "Appointments" },
   { href: "/patient-portal", label: "Patient Portal" },
   { href: "/our-radiologists", label: "Our Radiologists" },
-  { href: "/exam-prep", label: "Exam Prep" },
   { href: "/insurances", label: "Insurances" },
   { href: "/contact", label: "Contact" },
 ];

@@ -2,7 +2,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export default function ContactPage() {
   return (
-    <div className="pt-[72px]">
+    <div className="pt-[104px]">
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-5 md:px-10">
           <div className="mb-16 hero-enter">
