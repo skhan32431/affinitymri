@@ -4,6 +4,7 @@ import { ServicesGrid } from "@/components/sections/services-grid";
 import { InsuranceBanner } from "@/components/sections/insurance-banner";
 import { ExpertReports } from "@/components/sections/expert-reports";
 import { ReviewsMarquee } from "@/components/sections/reviews-marquee";
+import { FaqSection } from "@/components/sections/faq-section";
 import { CtaSection } from "@/components/sections/cta-section";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <InsuranceBanner />
       <ExpertReports />
       <ReviewsMarquee />
+      <FaqSection />
       <CtaSection />
     </>
   );

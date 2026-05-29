@@ -44,6 +44,8 @@ export function Footer() {
               <Link href="/patient-portal" className="text-sm text-on-surface-variant hover:text-primary transition-colors">Patient Portal</Link>
               <Link href="/insurances" className="text-sm text-on-surface-variant hover:text-primary transition-colors">Insurance Info</Link>
               <Link href="/exam-prep" className="text-sm text-on-surface-variant hover:text-primary transition-colors">Exam Prep</Link>
+              <Link href="/forms" className="text-sm text-on-surface-variant hover:text-primary transition-colors">Forms</Link>
+              <Link href="/rx-upload" className="text-sm text-on-surface-variant hover:text-primary transition-colors">RX Upload</Link>
             </div>
           </div>
 
