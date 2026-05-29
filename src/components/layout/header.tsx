@@ -18,12 +18,12 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-outline-variant/50">
+    <header className="fixed top-[32px] left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-outline-variant/50">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-5 md:px-10 h-16 md:h-[72px]">
-        <Link href="/" className="flex items-center gap-2.5 shrink-0">
+        <Link href="/" className="flex items-center gap-2.5 shrink-0 -ml-1 py-1 px-1 rounded-lg active:opacity-70 transition-opacity">
           <Image
             src="/logo.jpg"
-            alt="Affinity Radiology"
+            alt="Affinity Radiology — Go to homepage"
             width={160}
             height={48}
             className="h-10 w-auto object-contain"
