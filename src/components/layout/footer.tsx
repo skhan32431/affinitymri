@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -7,14 +8,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr] gap-10 md:gap-8">
           {/* Brand column */}
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <svg width="26" height="26" viewBox="0 0 1024 1024" fill="none" className="text-primary">
-                <circle cx="512" cy="512" r="440" stroke="currentColor" strokeWidth="80" fill="none" />
-                <circle cx="512" cy="512" r="180" fill="currentColor" opacity="0.5" />
-                <line x1="512" y1="280" x2="512" y2="744" stroke="currentColor" strokeWidth="40" />
-                <line x1="280" y1="512" x2="744" y2="512" stroke="currentColor" strokeWidth="40" />
-              </svg>
-              <span className="text-base font-bold text-on-surface tracking-tight">Affinity Radiology</span>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/logo.jpg"
+                alt="Affinity Radiology"
+                width={140}
+                height={42}
+                className="h-9 w-auto object-contain"
+              />
             </Link>
             <div className="space-y-1.5 text-sm text-on-surface-variant leading-relaxed">
               <p>155 State Street, Hackensack, NJ 07601</p>
