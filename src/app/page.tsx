@@ -3,6 +3,7 @@ import { OpenMriShowcase } from "@/components/sections/open-mri-showcase";
 import { ServicesGrid } from "@/components/sections/services-grid";
 import { InsuranceBanner } from "@/components/sections/insurance-banner";
 import { ExpertReports } from "@/components/sections/expert-reports";
+import { CostComparison } from "@/components/sections/cost-comparison";
 import { ReviewsMarquee } from "@/components/sections/reviews-marquee";
 import { FaqSection } from "@/components/sections/faq-section";
 import { CtaSection } from "@/components/sections/cta-section";
@@ -15,6 +16,7 @@ export default function Home() {
       <ServicesGrid />
       <InsuranceBanner />
       <ExpertReports />
+      <CostComparison />
       <ReviewsMarquee />
       <FaqSection />
       <CtaSection />
