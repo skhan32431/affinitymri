@@ -72,7 +72,7 @@ export function OpenMriShowcase() {
               {/* Stats row */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10 stagger-3">
                 {features.map((f) => (
-                  <div key={f.label} className="bg-white/[0.06] rounded-xl p-4 ring-1 ring-white/10 text-center">
+                  <div key={f.label} className="bg-white/[0.06] rounded-xl p-4 ring-1 ring-white/10 flex flex-col items-center justify-center text-center min-h-[100px]">
                     <div className="text-lg font-bold text-primary-fixed-dim">{f.label}</div>
                     <div className="text-xs text-inverse-on-surface/60 mt-0.5">{f.description}</div>
                   </div>
