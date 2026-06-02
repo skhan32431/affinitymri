@@ -5,9 +5,11 @@ import { useEffect, useRef } from "react";
 export function ScrollReveal({
   children,
   className = "",
+  gentle = false,
 }: {
   children: React.ReactNode;
   className?: string;
+  gentle?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -22,15 +24,15 @@ export function ScrollReveal({
           observer.unobserve(el);
         }
       },
-      { rootMargin: "-80px" }
+      { rootMargin: gentle ? "-40px" : "-80px" }
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [gentle]);
 
   return (
-    <div ref={ref} className={`scroll-reveal ${className}`}>
+    <div ref={ref} className={`${gentle ? "scroll-reveal-gentle" : "scroll-reveal"} ${className}`}>
       {children}
     </div>
   );

@@ -59,13 +59,12 @@ export function ServicesGrid() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {services.map((service, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {services.map((service) => (
+              <ScrollReveal key={service.title} gentle>
               <Link
-                key={service.title}
                 href={service.href}
-                className={`group block bg-white rounded-2xl overflow-hidden border border-outline-variant/60 hover:border-primary/30 hover:shadow-[0_8px_40px_rgba(0,61,155,0.06)] transition-all duration-500 ease-out-expo h-full stagger-${Math.min(i + 1, 5)}`}
+                className="group block bg-white rounded-2xl overflow-hidden border border-outline-variant/60 hover:border-primary/30 hover:shadow-[0_8px_40px_rgba(0,61,155,0.06)] transition-all duration-500 ease-out-expo h-full"
               >
                 {/* Image */}
                 <div className="relative h-44 overflow-hidden">
@@ -98,9 +97,9 @@ export function ServicesGrid() {
                   </span>
                 </div>
               </Link>
+              </ScrollReveal>
             ))}
           </div>
-        </ScrollReveal>
       </div>
     </section>
   );
