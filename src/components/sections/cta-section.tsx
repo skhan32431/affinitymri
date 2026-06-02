@@ -14,25 +14,19 @@ export function CtaSection() {
             directly at (201) 968-5544.
           </p>
 
-          <div className="max-w-xl mx-auto rounded-2xl bg-white/10 p-1 ring-1 ring-white/20 stagger-3">
-            <div className="flex flex-col sm:flex-row gap-2 bg-white rounded-[calc(1rem-4px)] p-1.5 shadow-xl">
-              <div className="flex-1 flex items-center px-4 text-on-surface">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-outline shrink-0 mr-3">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                </svg>
-                <input
-                  type="text"
-                  placeholder="Enter zip code or city"
-                  className="w-full border-none focus:outline-none text-[15px] text-on-surface placeholder:text-outline bg-transparent py-3"
-                />
-              </div>
-              <Link
-                href="/contact"
-                className="bg-primary-container text-white px-6 py-3 rounded-xl text-sm font-semibold tracking-wide hover:opacity-90 btn-press transition-all duration-200 text-center whitespace-nowrap"
-              >
-                Find Location
-              </Link>
-            </div>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 stagger-3">
+            <Link
+              href="/appointments"
+              className="inline-flex items-center justify-center bg-white text-primary px-8 py-4 rounded-xl text-sm font-semibold tracking-wide hover:bg-white/90 btn-press transition-all duration-200 shadow-xl"
+            >
+              Request an Appointment
+            </Link>
+            <a
+              href="tel:2019685544"
+              className="inline-flex items-center justify-center border-2 border-white/30 text-white px-8 py-4 rounded-xl text-sm font-semibold tracking-wide hover:bg-white/10 btn-press transition-all duration-200"
+            >
+              Call (201) 968-5544
+            </a>
           </div>
 
           <div className="mt-10 flex flex-wrap justify-center gap-8 text-white/70 stagger-4">
