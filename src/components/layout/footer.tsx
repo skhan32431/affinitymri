@@ -30,7 +30,8 @@ export function Footer() {
             <h6 className="text-xs font-semibold text-on-surface uppercase tracking-[0.15em] mb-4">Services</h6>
             <div className="flex flex-col gap-2.5">
               {[
-                { label: "MRI", id: "mri" },
+                { label: "Open MRI", id: "open-mri" },
+                { label: "3T MRI", id: "3t-mri" },
                 { label: "PET/CT", id: "petct" },
                 { label: "Digital X-Ray", id: "xray" },
                 { label: "Ultrasound", id: "ultrasound" },

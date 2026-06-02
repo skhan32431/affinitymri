@@ -6,15 +6,15 @@ const services = [
   {
     title: "High-Field Open MRI",
     description: "World's strongest 1.2T open MRI — no tunnel, no compromise on image quality. Claustrophobia-friendly.",
-    href: "/services#mri",
+    href: "/services#open-mri",
     badge: "Featured",
-    image: "/open-mri.jpg",
+    image: "/open-mri-2.jpg",
   },
   {
     title: "Closed 3T MRI",
     description: "Twice the strength of standard MRI with superior resolution, shorter scan times, and exceptional clarity.",
-    href: "/services#mri",
-    image: "/3t-mri.jpg",
+    href: "/services#3t-mri",
+    image: "/3t-mri-new.jpg",
   },
   {
     title: "PET/CT Imaging",

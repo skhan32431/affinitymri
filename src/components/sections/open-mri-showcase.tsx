@@ -37,6 +37,18 @@ export function OpenMriShowcase() {
                   />
                 </div>
               </div>
+              {/* Supplemental image — inset */}
+              <div className="absolute -bottom-6 -right-4 w-[40%] rounded-xl bg-white/10 p-1 ring-1 ring-white/20 shadow-2xl">
+                <div className="rounded-[calc(0.75rem-4px)] overflow-hidden">
+                  <Image
+                    src="/open-mri-2.jpg"
+                    alt="Open MRI suite with ambient lighting"
+                    width={400}
+                    height={500}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
               {/* Glow accent */}
               <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-primary/20 rounded-full blur-[60px]" />
             </div>

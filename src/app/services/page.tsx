@@ -4,13 +4,21 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 const services = [
   {
-    id: "mri",
-    title: "Magnetic Resonance Imaging (MRI)",
-    subtitle: "High-Field Open & Closed 3T MRI",
-    description: "We offer both the world's strongest high-field open MRI (Oasis 1.2T) and a closed 3T MRI for the highest resolution imaging available. Our open MRI is designed for patients who experience claustrophobia or need a more comfortable scanning experience.",
-    features: ["No tunnel anxiety with Open MRI", "660 lb patient capacity", "12–15 minute scan times", "Music & lighting for comfort", "3T closed MRI for maximum resolution", "Preferred by neuro & orthopedic surgeons"],
+    id: "open-mri",
+    title: "High-Field 1.2T Open MRI",
+    subtitle: "The World's Strongest Open MRI",
+    description: "Our Oasis 1.2T High-Field Open MRI delivers closed-bore image quality with an open, boreless design. No tunnel means no claustrophobia — patients can have a companion present, enjoy music and ambient lighting, and feel comfortable throughout the entire scan.",
+    features: ["Boreless design — no tunnel anxiety", "1.2 Tesla high-field strength", "660 lb patient capacity", "12–15 minute scan times", "Music & ambient lighting for comfort", "Companion can stay during scan", "Preferred by neuro & orthopedic surgeons"],
     image: "/open-mri.jpg",
-    secondImage: "/3t-mri.jpg",
+    secondImage: "/open-mri-2.jpg",
+  },
+  {
+    id: "3t-mri",
+    title: "Closed 3T MRI",
+    subtitle: "Maximum Resolution & Clarity",
+    description: "Our 3 Tesla closed MRI provides twice the magnetic field strength of standard 1.5T scanners, delivering superior image resolution with shorter scan times. Ideal for detailed neurological, musculoskeletal, and cardiac imaging where the highest level of detail is required.",
+    features: ["3 Tesla — twice standard MRI strength", "Superior image resolution & clarity", "Shorter scan times", "Ideal for neuro & cardiac studies", "Advanced imaging protocols", "Detailed soft tissue visualization"],
+    image: "/3t-mri-new.jpg",
   },
   {
     id: "petct",
@@ -108,6 +116,13 @@ export default function ServicesPage() {
                       <Image src={service.image} alt={service.title} width={800} height={500} className="w-full h-auto" />
                     </div>
                   </div>
+                  {service.secondImage && (
+                    <div className="absolute -bottom-6 -right-4 w-[45%] rounded-xl bg-white p-1 ring-1 ring-black/[0.06] shadow-xl">
+                      <div className="rounded-[calc(0.75rem-4px)] overflow-hidden">
+                        <Image src={service.secondImage} alt={`${service.title} — alternate view`} width={400} height={300} className="w-full h-auto" />
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </ScrollReveal>
