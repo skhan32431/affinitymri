@@ -19,7 +19,7 @@ export default function OurRadiologistsPage() {
   return (
     <div className="pt-[104px]">
       <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-5 md:px-10">
+        <div className="max-w-[1440px] mx-auto px-5 md:px-10">
           <div className="max-w-2xl mb-16 hero-enter">
             <span className="inline-block py-1.5 px-4 rounded-full bg-primary/8 text-primary text-xs font-semibold tracking-widest uppercase mb-6">
               Our Team

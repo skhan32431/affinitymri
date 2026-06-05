@@ -4,7 +4,7 @@ export default function ContactPage() {
   return (
     <div className="pt-[104px]">
       <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-5 md:px-10">
+        <div className="max-w-[1440px] mx-auto px-5 md:px-10">
           <div className="mb-16 hero-enter">
             <h1 className="text-[clamp(2rem,5vw,2.5rem)] font-extrabold text-on-surface leading-[1.12] tracking-[-0.02em] mb-4">
               Contact Us

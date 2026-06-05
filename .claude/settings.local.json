@@ -46,7 +46,9 @@
       "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2016/03/CT.jpeg\" -o public/pet-ct.jpg)",
       "Bash(curl -sL \"https://affinitymri.com/wp-content/uploads/2017/06/Xray.jpeg\" -o public/xray.jpg)",
       "Bash(git commit:*)",
-      "Bash(sips:*)"
+      "Bash(sips:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)"
     ]
   }
 }

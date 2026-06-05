@@ -38,7 +38,7 @@ export default function AboutPage() {
     <div className="pt-[104px]">
       {/* Hero */}
       <section className="relative py-20 md:py-28 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-5 md:px-10">
+        <div className="max-w-[1440px] mx-auto px-5 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             <div className="hero-enter">
               <span className="inline-block py-1.5 px-4 rounded-full bg-primary/8 text-primary text-xs font-semibold tracking-widest uppercase mb-6">
@@ -88,7 +88,7 @@ export default function AboutPage() {
 
       {/* Stats */}
       <section className="py-16 bg-primary text-white">
-        <div className="max-w-7xl mx-auto px-5 md:px-10">
+        <div className="max-w-[1440px] mx-auto px-5 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat) => (
               <div key={stat.label}>
@@ -104,7 +104,7 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="py-24 md:py-32 bg-surface-low">
-        <div className="max-w-7xl mx-auto px-5 md:px-10">
+        <div className="max-w-[1440px] mx-auto px-5 md:px-10">
           <ScrollReveal>
             <div className="text-center mb-16 max-w-2xl mx-auto">
               <h2 className="text-[clamp(1.75rem,4vw,2rem)] font-bold text-on-surface tracking-[-0.01em] mb-4 stagger-1">
@@ -134,7 +134,7 @@ export default function AboutPage() {
 
       {/* Facility images */}
       <section className="py-24 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-5 md:px-10">
+        <div className="max-w-[1440px] mx-auto px-5 md:px-10">
           <ScrollReveal>
             <h2 className="text-[clamp(1.75rem,4vw,2rem)] font-bold text-on-surface tracking-[-0.01em] mb-10 stagger-1">
               Our Facility

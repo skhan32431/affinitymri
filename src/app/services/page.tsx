@@ -59,7 +59,7 @@ export default function ServicesPage() {
     <div className="pt-[104px]">
       {/* Hero */}
       <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-5 md:px-10">
+        <div className="max-w-[1440px] mx-auto px-5 md:px-10">
           <span className="inline-block py-1.5 px-4 rounded-full bg-primary/8 text-primary text-xs font-semibold tracking-widest uppercase mb-6 hero-enter">
             Clinical Excellence
           </span>
@@ -79,7 +79,7 @@ export default function ServicesPage() {
           id={service.id}
           className={`py-20 md:py-28 ${i % 2 === 0 ? "bg-surface-low" : "bg-white"}`}
         >
-          <div className="max-w-7xl mx-auto px-5 md:px-10">
+          <div className="max-w-[1440px] mx-auto px-5 md:px-10">
             <ScrollReveal>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center">
                 <div className={i % 2 === 0 ? "order-1" : "order-1 lg:order-2"}>
@@ -132,7 +132,7 @@ export default function ServicesPage() {
 
       {/* Bottom CTA */}
       <section className="py-16 bg-primary text-white text-center">
-        <div className="max-w-7xl mx-auto px-5 md:px-10">
+        <div className="max-w-[1440px] mx-auto px-5 md:px-10">
           <h2 className="text-2xl font-bold mb-4">Need help choosing a service?</h2>
           <p className="text-white/80 mb-8 max-w-md mx-auto">Our clinical advisors are available to guide you based on your physician&apos;s referral.</p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -4,7 +4,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 export function CtaSection() {
   return (
     <section className="py-24 md:py-32 bg-primary text-white">
-      <div className="max-w-7xl mx-auto px-5 md:px-10 text-center">
+      <div className="max-w-[1440px] mx-auto px-5 md:px-10 text-center">
         <ScrollReveal>
           <h2 className="text-[clamp(1.75rem,4vw,2rem)] font-bold tracking-[-0.01em] mb-4 stagger-1">
             Ready to schedule your visit?

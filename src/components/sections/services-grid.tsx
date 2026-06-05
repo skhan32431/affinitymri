@@ -46,7 +46,7 @@ const services = [
 export function ServicesGrid() {
   return (
     <section className="py-24 md:py-32 bg-surface-low">
-      <div className="max-w-7xl mx-auto px-5 md:px-10">
+      <div className="max-w-[1440px] mx-auto px-5 md:px-10">
         <ScrollReveal>
           <div className="text-center mb-16 max-w-2xl mx-auto">
             <h2 className="text-[clamp(1.75rem,4vw,2rem)] font-bold text-on-surface tracking-[-0.01em] mb-4 stagger-1">

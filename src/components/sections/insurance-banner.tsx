@@ -4,7 +4,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 export function InsuranceBanner() {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-5 md:px-10">
+      <div className="max-w-[1440px] mx-auto px-5 md:px-10">
         <ScrollReveal>
           <div className="rounded-2xl bg-primary/[0.03] border border-primary/10 p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="flex-1">

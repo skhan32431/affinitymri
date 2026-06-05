@@ -4,7 +4,7 @@ import Image from "next/image";
 export function Footer() {
   return (
     <footer className="bg-surface-container border-t border-outline-variant/50">
-      <div className="max-w-7xl mx-auto px-5 md:px-10 py-14">
+      <div className="max-w-[1440px] mx-auto px-5 md:px-10 py-14">
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr_1fr] gap-10 md:gap-8">
           {/* Brand column */}
           <div>
@@ -72,7 +72,7 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div className="border-t border-outline-variant/50">
-        <div className="max-w-7xl mx-auto px-5 md:px-10 py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="max-w-[1440px] mx-auto px-5 md:px-10 py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-xs text-on-surface-variant">
             &copy; {new Date().getFullYear()} Affinity Radiology. All rights reserved.
           </p>

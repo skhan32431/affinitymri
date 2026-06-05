@@ -27,7 +27,7 @@ const trustItems = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-white pt-[104px] overflow-hidden">
+    <section className="relative min-h-[100dvh] flex items-center bg-white pt-[104px] overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute inset-0">
         <Image
@@ -40,7 +40,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/70" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-5 md:px-10 py-20 lg:py-0">
+      <div className="relative z-10 max-w-[1440px] mx-auto w-full px-5 md:px-10 2xl:px-16 py-20 lg:py-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Left — copy */}
           <div className="hero-enter">
@@ -48,12 +48,12 @@ export function Hero() {
               Advanced Diagnostic Center
             </span>
 
-            <h1 className="text-[clamp(2.25rem,5vw,3rem)] font-extrabold text-on-surface leading-[1.12] tracking-[-0.02em] mb-6">
+            <h1 className="text-[clamp(2.25rem,4vw,3.5rem)] font-extrabold text-on-surface leading-[1.12] tracking-[-0.02em] mb-6">
               Precision Imaging for{" "}
               <span className="text-primary">Clinical Clarity</span>
             </h1>
 
-            <p className="text-lg text-on-surface-variant leading-[1.7] mb-10 max-w-[480px]">
+            <p className="text-lg 2xl:text-xl text-on-surface-variant leading-[1.7] mb-10 max-w-[520px]">
               Delivering high-fidelity diagnostic reports with state-of-the-art
               technology and expert sub-specialty radiologist oversight.
             </p>
